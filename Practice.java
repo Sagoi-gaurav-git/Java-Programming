@@ -6,19 +6,18 @@ public class Practice {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number of terms:");
-        int n = sc.nextInt();
+        System.out.println("Enter the first number:");
+        int a = sc.nextInt();
 
-        int a = 0;
-        int b = 1;
+        System.out.println("Enter the second number:");
+        int b = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-
-            System.out.print(a + " ");
-
-            int c = a + b;
+        while (b != 0) {
+            int remainder = a % b;
             a = b;
-            b = c;
+            b = remainder;
         }
+
+        System.out.println("HCF/GCD = " + a);
     }
 }
