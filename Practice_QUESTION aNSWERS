@@ -291,3 +291,295 @@ public class Practice {
           
     }
 } 
+
+smallest number in a digit
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+
+        int smallest=9;
+        while(n>0){
+          int lastdigit=n%10;
+          if(lastdigit<smallest){
+            smallest=lastdigit;
+          }
+          n=n/10;
+        }
+        System.out.println(smallest);
+    }
+} 
+
+to count odd and even in a number
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+        int even=0;
+        int odd=0;
+        while(n>0){
+          int lastdigit=n%10;
+          if(lastdigit%2==0){
+            even++;
+          }
+          else{
+            odd++;
+          }
+          n=n/10;
+        }
+        System.out.println(odd+" the odd numbers");
+        System.out.println(even+" the even numbers");
+          
+    }
+} 
+
+Sum of even digits and Odd digits in a  number
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+        
+          int Evensum=0;
+          int Oddsum=0;
+
+          while(n>0){
+            int lastdigit=n%10;
+
+            if(lastdigit%2==0){
+              Evensum=Evensum+lastdigit;
+            }
+            else{
+              Oddsum=Oddsum+lastdigit;
+            }
+            n=n/10;
+            
+          }
+          System.out.println(Oddsum);
+          System.out.println(Evensum);
+    }
+} 
+
+
+Find the product of all digits of a number.
+
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+         int product=1;
+
+         while (n>0) {
+          int lastdigit=n%10;
+
+          product = product*lastdigit;
+
+          n=n/10;
+         }
+         System.out.println(product);
+         
+          
+    }
+} 
+
+
+
+Count how many times a particular digit occurs in a number
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+        System.out.println("enter the digit");
+        int digit=sc.nextInt();
+         int count=0;
+         while(n>0){
+          int lastdigit=n%10;
+          if(digit==lastdigit){
+            count++;
+          }
+          n=n/10;
+         }       
+         System.out.println("the digit occurs "+ count);   
+    }
+} 
+
+
+Find the sum of numbers from 1 to n using a while loop.
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+
+        int sum=0;
+        int i=1;
+
+        while(n>=i){
+          sum=sum+i;
+
+          i++;
+
+        }
+        System.out.println(sum);
+        
+            
+    }
+} 
+
+Print all numbers from 1 to n that are divisible by 3
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+        
+        int i=1;
+        while(n>=i){
+          if(i%3==0){
+            System.out.println(i);
+          }
+          i++;
+        }
+        
+            
+    }
+} 
+
+
+Count the even and odd numbers from 1 to n.
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = sc.nextInt();
+      
+        int countEven=0;
+        int countOdd=0;
+        
+        int i=1;
+        while(n>=i){
+          if(i%2==0){
+            countEven++;
+          }
+          else{
+            countOdd++;
+          }
+          i++;
+        }
+        System.out.println("the even numbers are "+countEven);
+        System.out.println("the odd numbers are "+countOdd);
+            
+    }
+} 
+
+Find the largest number among n numbers entered by the user
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("How many numbers do you want to enter?");
+        int n = sc.nextInt();
+
+        System.out.println("Enter number 1:");
+        int num = sc.nextInt();
+
+        int largest = num;
+        int i = 2;
+
+        while (i <= n) {
+
+            System.out.println("Enter number " + i + ":");
+            num = sc.nextInt();
+
+            if (num > largest) {
+                largest = num;
+            }
+
+            i++;
+        }
+
+        System.out.println("Largest number = " + largest);
+    }
+}
+
+
+ Check whether a number is a perfect number.
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number:");
+        int n = sc.nextInt();
+
+        int sum = 0;
+        int i = 1;
+
+        while (i < n) {
+
+            if (n % i == 0) {
+                sum = sum + i;
+            }
+
+            i++;
+        }
+
+        if (sum == n && n > 0) {
+            System.out.println("Perfect Number");
+        }
+        else {
+            System.out.println("Not a Perfect Number");
+        }
+    }
+}
