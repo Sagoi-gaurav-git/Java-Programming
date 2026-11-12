@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class Practice {
@@ -6,27 +5,35 @@ public class Practice {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("How many numbers do you want to enter?");
-        int n = sc.nextInt();
+        int arr[] = new int[10];
 
-        System.out.println("Enter number 1:");
-        int num = sc.nextInt();
+        int positive = 0;
+        int negative = 0;
+        int zero = 0;
 
-        int largest = num;
-        int i = 2;
+        System.out.println("Enter 10 numbers:");
 
-        while (i <= n) {
-
-            System.out.println("Enter number " + i + ":");
-            num = sc.nextInt();
-
-            if (num > largest) {
-                largest = num;
-            }
-
-            i++;
+        // Taking input
+        for (int i = 0; i < 10; i++) {
+            arr[i] = sc.nextInt();
         }
 
-        System.out.println("Largest number = " + largest);
+        // Counting numbers
+        for (int i = 0; i < 10; i++) {
+
+            if (arr[i] > 0) {
+                positive++;
+            }
+            else if (arr[i] < 0) {
+                negative++;
+            }
+            else {
+                zero++;
+            }
+        }
+
+        System.out.println("Positive numbers = " + positive);
+        System.out.println("Negative numbers = " + negative);
+        System.out.println("Zeros = " + zero);
     }
 }
