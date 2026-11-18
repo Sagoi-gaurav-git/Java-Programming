@@ -619,7 +619,7 @@ public class Practice {
             else {
                 zero++;
             }
-        }
+        }ssdsd
 
         System.out.println("Positive numbers = " + positive);
         System.out.println("Negative numbers = " + negative);
