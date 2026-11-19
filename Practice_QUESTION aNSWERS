@@ -585,116 +585,25 @@ public class Practice {
     }
 }
 
- Count positive, negative and zero elements.
+ Maximum element in an array
 
  import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+       int[] arr ={25, 10, 75, 40, 90, 15};
+       
+       int max=arr[0];
 
-        int arr[] = new int[10];
+       for(int i=1;i<arr.length;i++){
 
-        int positive = 0;
-        int negative = 0;
-        int zero = 0;
-
-        System.out.println("Enter 10 numbers:");
-
-        // Taking input
-        for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        // Counting numbers
-        for (int i = 0; i < 10; i++) {
-
-            if (arr[i] > 0) {
-                positive++;
-            }
-            else if (arr[i] < 0) {
-                negative++;
-            }
-            else {
-                zero++;
-            }
-        }ssdsd
-
-        System.out.println("Positive numbers = " + positive);
-        System.out.println("Negative numbers = " + negative);
-        System.out.println("Zeros = " + zero);
-    }
+if(arr[i]>max){
+    max=arr[i];
 }
 
-Check whether an array is sorted in ascending order
-
-import java.util.*;
-
-public class Practice {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter the size of array:");
-        int n = sc.nextInt();
-
-        int arr[] = new int[n];
-
-        System.out.println("Enter array elements:");
-
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        boolean isSorted = true;
-
-        for (int i = 0; i < n - 1; i++) {
-
-            if (arr[i] > arr[i + 1]) {
-                isSorted = false;
-                break;
-            }
-        }
-
-        if (isSorted) {
-            System.out.println("Array is sorted in ascending order");
-        }
-        else {
-            System.out.println("Array is not sorted");
-        }
-
-    }
-}
-
-Find the missing number in an array containing numbers from 1 to N.
-
-import java.util.*;
-
-public class Practice {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter the value of N:");
-        int n = sc.nextInt();
-
-        int arr[] = new int[n - 1];
-
-        System.out.println("Enter array elements:");
-
-        int sum = 0;
-
-        for (int i = 0; i < n - 1; i++) {
-            arr[i] = sc.nextInt();
-            sum = sum + arr[i];
-        }
-
-        int total = n * (n + 1) / 2;
-
-        int missing = total - sum;
-
-        System.out.println("Missing number = " + missing);
+       }
+System.out.println("the maximum element is "+max);
 
     }
 }
