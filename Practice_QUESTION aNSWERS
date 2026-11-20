@@ -585,7 +585,7 @@ public class Practice {
     }
 }
 
- Maximum element in an array
+------Maximum element in an array
 
  import java.util.*;
 
@@ -607,3 +607,5 @@ System.out.println("the maximum element is "+max);
 
     }
 }
+------Minimum element in an array
+
