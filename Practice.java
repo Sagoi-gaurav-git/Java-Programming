@@ -15,5 +15,5 @@ public class Practice {
     }
         System.out.println("the minimum element is "+min);
 
-    }   `      
+    }   `      35435454654654
 }
